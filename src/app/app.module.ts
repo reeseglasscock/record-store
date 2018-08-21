@@ -12,6 +12,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
+import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,7 +28,8 @@ export const firebaseConfig = {
     AboutComponent,
     MarketplaceComponent,
     AlbumDetailComponent,
-    AdminComponent
+    AdminComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,6 @@ export const firebaseConfig = {
     AngularFireDatabaseModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, LoadingSpinnerComponent]
 })
 export class AppModule { }

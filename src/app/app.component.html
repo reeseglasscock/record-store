@@ -9,14 +9,16 @@
     </ul>
   </div>
 </nav>
-
-<div class="container">
-  <h1>{{title}}</h1>
-  <router-outlet></router-outlet>
-</div>
-
-<footer class="footer">
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+<div *ngIf="spinnerShowing">
   <div class="container">
-    <a routerLink="admin" class="text-muted">Admin</a>
+    <h1>{{title}}</h1>
+    <router-outlet></router-outlet>
   </div>
-</footer>
+
+  <footer class="footer">
+    <div class="container">
+      <a routerLink="admin" class="text-muted">Admin</a>
+    </div>
+  </footer>
+</div>

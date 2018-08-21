@@ -1,4 +1,5 @@
 <h3>Add New Album to Inventory</h3>
+
 <div class="panel-body">
   <div class="">
     <label>Album Title</label>
@@ -15,4 +16,5 @@
     <br>
     <textarea #newDescription></textarea>
   </div>
+  <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value); newTitle.value=''; newArtist.value=''; newDescription.value='';">Add</button>
 </div>
